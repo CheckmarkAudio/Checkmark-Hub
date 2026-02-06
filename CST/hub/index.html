@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkmark Hub</title>
+    <link rel="stylesheet" href="../shared/cst-ui.css" />
+    <link rel="stylesheet" href="./hub.css" />
+  </head>
+  <body class="cst-theme cst-theme--dark">
+    <div class="hub">
+      <aside class="hub-sidebar" aria-label="App navigation">
+        <div class="hub-brand">
+          <div class="hub-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path
+                d="M5.5 12.6l3.2 3.2L18.6 5.9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="hub-brand-text">
+            <div class="hub-brand-title">Checkmark Hub</div>
+            <div class="hub-brand-subtitle">CST Core Shell</div>
+          </div>
+        </div>
+
+        <div class="hub-section">
+          <div class="hub-section-title">Favorites</div>
+          <div class="hub-list hub-list--compact">
+            <button class="hub-list-item" type="button">
+              <span class="hub-list-icon" aria-hidden="true">★</span>
+              <span>Accountant</span>
+            </button>
+            <button class="hub-list-item" type="button">
+              <span class="hub-list-icon" aria-hidden="true">✦</span>
+              <span>Dummy</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hub-section">
+          <div class="hub-section-title">All Apps</div>
+          <div class="hub-list">
+            <button class="hub-list-item" type="button">
+              <span class="hub-list-icon" aria-hidden="true">□</span>
+              <span>Accountant</span>
+            </button>
+            <button class="hub-list-item" type="button">
+              <span class="hub-list-icon" aria-hidden="true">□</span>
+              <span>Dummy</span>
+            </button>
+            <button class="hub-list-item" type="button">
+              <span class="hub-list-icon" aria-hidden="true">□</span>
+              <span>App Manager</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hub-main">
+        <header class="hub-topbar">
+          <div class="hub-context">
+            <span class="hub-context-label">Context</span>
+            <span class="hub-context-value">Audio</span>
+          </div>
+
+          <div class="hub-command">
+            <div class="hub-command-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M16.5 16.5L21 21"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <input
+              class="hub-command-input"
+              type="text"
+              placeholder="Command palette (Cmd/Ctrl+K)"
+              aria-label="Command palette"
+              disabled
+            />
+          </div>
+
+          <div class="hub-actions">
+            <button class="cst-button cst-button--ghost" type="button" disabled>
+              Theme
+            </button>
+          </div>
+        </header>
+
+        <main class="hub-workspace" aria-live="polite">
+          <div class="hub-empty">
+            <div class="hub-empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M7 20h10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="hub-empty-title">No app open</div>
+            <div class="hub-empty-subtitle">Choose an app from the sidebar to begin.</div>
+          </div>
+        </main>
+
+        <footer class="hub-console">
+          <div class="hub-console-handle">
+            <span class="hub-console-dot" aria-hidden="true"></span>
+            <span>Console</span>
+          </div>
+          <div class="hub-console-body">
+            <div class="hub-console-placeholder">
+              Event timeline will appear here.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
