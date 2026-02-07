@@ -32,7 +32,7 @@
         <div class="hub-section">
           <div class="section-title">Favorites</div>
           <div class="hub-list hub-list--compact">
-            <button class="nav-item" type="button" aria-current="page" title="Accountant">
+            <button class="nav-item" type="button" title="Accountant" data-app-id="accountant">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M6 6h12v12H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
@@ -41,7 +41,7 @@
               </span>
               <span>Accountant</span>
             </button>
-            <button class="nav-item" type="button" title="Waveforms">
+            <button class="nav-item" type="button" title="Waveforms" data-app-id="waveforms">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path
@@ -62,7 +62,7 @@
         <div class="hub-section">
           <div class="section-title">All Apps</div>
           <div class="hub-list">
-            <button class="nav-item" type="button" title="Accountant">
+            <button class="nav-item" type="button" title="Accountant" data-app-id="accountant">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M7 6h10v12H7z" fill="none" stroke="currentColor" stroke-width="1.6" />
@@ -71,7 +71,16 @@
               </span>
               <span>Accountant</span>
             </button>
-            <button class="nav-item" type="button" title="Session Notes">
+            <button class="nav-item" type="button" title="Dummy" data-app-id="dummy">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6.5 6.5h11v11h-11z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M9 10h6M9 14h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Dummy</span>
+            </button>
+            <button class="nav-item" type="button" title="Session Notes" data-app-id="session-notes">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M6 7h12v10H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
@@ -80,7 +89,7 @@
               </span>
               <span>Session Notes</span>
             </button>
-            <button class="nav-item" type="button" title="App Manager">
+            <button class="nav-item" type="button" title="App Manager" data-app-id="app-manager">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M5 7h14M5 12h14M5 17h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
@@ -88,7 +97,7 @@
               </span>
               <span>App Manager</span>
             </button>
-            <button class="nav-item" type="button" title="Archive">
+            <button class="nav-item" type="button" title="Archive" data-app-id="archive">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M6 8h12v10H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
@@ -97,7 +106,7 @@
               </span>
               <span>Archive</span>
             </button>
-            <button class="nav-item" type="button" title="Metrics">
+            <button class="nav-item" type="button" title="Metrics" data-app-id="metrics">
               <span class="hub-list-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
                   <path d="M6 16V8M12 16V5M18 16v-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
@@ -144,6 +153,17 @@
               <span class="hub-context-dot" aria-hidden="true"></span>
               Audio
             </span>
+            <button class="btn btn-ghost hub-open-external" type="button" hidden disabled>
+              <span class="hub-open-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M14 4h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M10 14l10-10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M20 14v6h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M4 10V4h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              Open in new tab
+            </button>
             <button class="btn btn-ghost hub-theme-toggle" type="button" aria-pressed="false">
               <span class="hub-theme-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
@@ -188,6 +208,9 @@
                 <span class="pill">Use Cmd/Ctrl + K for commands</span>
               </div>
             </div>
+            <div class="hub-iframe-shell" hidden>
+              <iframe class="hub-workspace-iframe" title="Workspace" allow="clipboard-read; clipboard-write"></iframe>
+            </div>
           </div>
         </main>
 
@@ -210,6 +233,6 @@
         </section>
       </div>
     </div>
-    <script src="./hub.js"></script>
+    <script type="module" src="./hub.js"></script>
   </body>
 </html>
