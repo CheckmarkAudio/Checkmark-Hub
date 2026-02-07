@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../shared/cst-ui.css" />
     <link rel="stylesheet" href="./hub.css" />
   </head>
-  <body class="cst-theme cst-theme--dark">
-    <div class="hub">
+  <body class="cst-theme" data-theme="dark">
+    <div class="hub cst-typography">
       <aside class="hub-sidebar" aria-label="App navigation">
         <div class="hub-brand">
           <div class="hub-logo" aria-hidden="true">
@@ -25,38 +25,85 @@
           </div>
           <div class="hub-brand-text">
             <div class="hub-brand-title">Checkmark Hub</div>
-            <div class="hub-brand-subtitle">CST Core Shell</div>
+            <div class="hub-brand-subtitle">Creative Studio Tools</div>
           </div>
         </div>
 
         <div class="hub-section">
-          <div class="hub-section-title">Favorites</div>
+          <div class="section-title">Favorites</div>
           <div class="hub-list hub-list--compact">
-            <button class="hub-list-item" type="button">
-              <span class="hub-list-icon" aria-hidden="true">★</span>
+            <button class="nav-item" type="button" aria-current="page" title="Accountant">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6 6h12v12H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M8 10h8M8 14h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
               <span>Accountant</span>
             </button>
-            <button class="hub-list-item" type="button">
-              <span class="hub-list-icon" aria-hidden="true">✦</span>
-              <span>Dummy</span>
+            <button class="nav-item" type="button" title="Waveforms">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path
+                    d="M4 12h2l2.2-4.4L11 17l2.1-5 1.9 4.2L17.5 9 20 12h0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>Waveforms</span>
             </button>
           </div>
         </div>
 
         <div class="hub-section">
-          <div class="hub-section-title">All Apps</div>
+          <div class="section-title">All Apps</div>
           <div class="hub-list">
-            <button class="hub-list-item" type="button">
-              <span class="hub-list-icon" aria-hidden="true">□</span>
+            <button class="nav-item" type="button" title="Accountant">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M7 6h10v12H7z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M9 9h6M9 13h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
               <span>Accountant</span>
             </button>
-            <button class="hub-list-item" type="button">
-              <span class="hub-list-icon" aria-hidden="true">□</span>
-              <span>Dummy</span>
+            <button class="nav-item" type="button" title="Session Notes">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6 7h12v10H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M8 10h8M8 13h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Session Notes</span>
             </button>
-            <button class="hub-list-item" type="button">
-              <span class="hub-list-icon" aria-hidden="true">□</span>
+            <button class="nav-item" type="button" title="App Manager">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M5 7h14M5 12h14M5 17h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
               <span>App Manager</span>
+            </button>
+            <button class="nav-item" type="button" title="Archive">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6 8h12v10H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M4 8h16l-1-3H5z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </span>
+              <span>Archive</span>
+            </button>
+            <button class="nav-item" type="button" title="Metrics">
+              <span class="hub-list-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6 16V8M12 16V5M18 16v-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Metrics</span>
             </button>
           </div>
         </div>
@@ -64,20 +111,20 @@
 
       <div class="hub-main">
         <header class="hub-topbar">
-          <div class="hub-context">
-            <span class="hub-context-label">Context</span>
-            <span class="hub-context-value">Audio</span>
+          <div class="hub-topbar-left">
+            <span class="hub-mark">CST</span>
+            <span class="hub-title">Checkmark Hub</span>
           </div>
 
-          <div class="hub-command">
+          <div class="hub-command input" role="search">
             <div class="hub-command-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8" />
                 <path
                   d="M16.5 16.5L21 21"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1.8"
                   stroke-linecap="round"
                 />
               </svg>
@@ -85,50 +132,84 @@
             <input
               class="hub-command-input"
               type="text"
-              placeholder="Command palette (Cmd/Ctrl+K)"
+              placeholder="Command or search"
               aria-label="Command palette"
               disabled
             />
+            <span class="hub-command-hint">Cmd/Ctrl + K</span>
           </div>
 
           <div class="hub-actions">
-            <button class="cst-button cst-button--ghost" type="button" disabled>
+            <span class="pill hub-context-pill">
+              <span class="hub-context-dot" aria-hidden="true"></span>
+              Audio
+            </span>
+            <button class="btn btn-ghost hub-theme-toggle" type="button" aria-pressed="false">
+              <span class="hub-theme-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path
+                    d="M12 3a7 7 0 1 0 7 7c0-.3 0-.6-.1-.9A6 6 0 0 1 12 3z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
               Theme
             </button>
           </div>
         </header>
 
         <main class="hub-workspace" aria-live="polite">
-          <div class="hub-empty">
-            <div class="hub-empty-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2" />
-                <path
-                  d="M7 20h10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
+          <div class="hub-workspace-shell">
+            <div class="hub-empty card">
+              <div class="hub-empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  <path
+                    d="M7 20h10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="hub-empty-title">Open an app</div>
+              <div class="hub-empty-subtitle">Choose a workspace on the left to get started.</div>
+              <div class="hub-empty-actions">
+                <button class="btn btn-primary" type="button" disabled>Browse apps</button>
+                <button class="btn btn-ghost" type="button" disabled>Quick tour</button>
+              </div>
+              <div class="hub-empty-hints">
+                <span class="pill">Favorites appear at top</span>
+                <span class="pill">Use Cmd/Ctrl + K for commands</span>
+              </div>
             </div>
-            <div class="hub-empty-title">No app open</div>
-            <div class="hub-empty-subtitle">Choose an app from the sidebar to begin.</div>
           </div>
         </main>
 
-        <footer class="hub-console">
-          <div class="hub-console-handle">
+        <section class="hub-console">
+          <input class="hub-console-toggle" type="checkbox" id="hub-console-toggle" />
+          <label class="hub-console-handle" for="hub-console-toggle">
             <span class="hub-console-dot" aria-hidden="true"></span>
             <span>Console</span>
-          </div>
+            <span class="hub-console-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </span>
+          </label>
           <div class="hub-console-body">
             <div class="hub-console-placeholder">
-              Event timeline will appear here.
+              Console output will appear here.
             </div>
           </div>
-        </footer>
+        </section>
       </div>
     </div>
+    <script src="./hub.js"></script>
   </body>
 </html>
