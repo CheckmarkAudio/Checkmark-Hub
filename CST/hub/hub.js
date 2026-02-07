@@ -1,5 +1,3 @@
-import { appRegistry } from "./registry.js";
-
 (() => {
   const themeStorageKey = "cst.hub.theme";
   const root = document.body;
@@ -27,7 +25,10 @@ import { appRegistry } from "./registry.js";
     });
   }
 
-  const appsById = new Map(appRegistry.map((app) => [app.id, app]));
+  const registry = Array.isArray(window.CST_HUB_REGISTRY)
+    ? window.CST_HUB_REGISTRY
+    : [];
+  const appsById = new Map(registry.map((app) => [app.id, app]));
   const navItems = Array.from(document.querySelectorAll("[data-app-id]"));
   const emptyState = document.querySelector(".hub-empty");
   const iframeShell = document.querySelector(".hub-iframe-shell");

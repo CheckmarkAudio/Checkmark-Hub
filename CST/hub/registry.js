@@ -1,4 +1,4 @@
-export const appRegistry = [
+const appRegistry = [
   {
     id: "accountant",
     label: "Accountant",
@@ -10,3 +10,5 @@ export const appRegistry = [
     path: "../apps/dummy/index.html",
   },
 ];
+
+window.CST_HUB_REGISTRY = appRegistry;
